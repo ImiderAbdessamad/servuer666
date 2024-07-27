@@ -1,0 +1,179 @@
+
+.body {
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 15rem;
+    margin-top: 15rem;
+    width: 20rem;
+    float: right;
+}
+
+form h1{
+    font-size: 4rem;
+    font-family: "Fira Code", monospace;
+    padding-bottom: 2rem;
+}
+
+.username, .password {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.username input, .password input {
+    width: 20rem;
+    height: 3rem;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #dddddd;
+    padding: 0 10px;
+    font-family: "Fira Code", monospace;
+}
+
+.username label, .password label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    transition: transform 0.2s ease;
+    font-family: "Fira Code", monospace;
+}
+
+.username input:focus + label, .username input:valid + label,
+.password input:focus + label, .password input:valid + label {
+    font-family: "Fira Code", monospace;
+    transform: translate(-10px, -30px) scale(0.8);
+    color: #333;
+}
+
+.forget {
+    display: flex;
+    align-items: end;
+    text-decoration: none;
+    font-family: "Fira Code", monospace;
+    color: rgb(7, 15, 30);
+}
+
+.forget:hover {
+    color: #FF752E;
+}
+
+.login {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.login .submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16rem;
+    height: 3rem;
+    border-radius: 10px;
+    border: none;
+    background: rgb(7, 15, 30);
+    color: white;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    font-family: "Fira Code", monospace;
+    font-size: 1.1rem;
+}
+
+.login .submit:hover {
+    transform: scale(1);
+    background: white;
+    color: rgb(7, 15, 30);
+}
+
+.login .icon {
+    background: transparent;
+    border: none;
+}
+
+img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.signUp {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 45.3rem;
+    height: 100vh;
+    padding-top: 7rem;
+    padding-left: 5rem;
+    background: url("../../../../assets/layout/Design sans titre.png");
+    overflow: hidden;
+    left: 0;
+    animation: animate 30s linear infinite;
+    opacity: 1;
+    animation-deLay: 0s;
+}
+
+
+@keyframes animate {
+    from {
+        background-position-y: 0;
+    }
+    to {
+        background-position-y: 100vh;
+    }
+}
+
+.signUp h1, p {
+    color: white;
+    font-family: "Fira Code", monospace;
+}
+
+.signUp h1{
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.signUp p{
+    font-size: 1.5rem;
+}
+
+.signUp img {
+    margin-top: 5rem;
+    margin-left: 2rem;
+    height: 35rem;
+    width: 30rem;
+    z-index: 9;
+}
+
+.signUpBtn{
+    width: 6rem;
+    height: 3rem;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    color: rgb(7, 15, 30);
+    font-family: "Fira Code", monospace;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 2rem;
+    transition: 0.2s ease-in-out;
+}
+
+.signUpBtn:hover{
+    transform: scale(1.2);
+}

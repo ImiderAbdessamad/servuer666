@@ -1,0 +1,50 @@
+
+<p-toast></p-toast>
+
+<div class="signIn">
+    <form [formGroup]="registerForm">
+        <h1>Create Account</h1>
+        <div class="social-icons">
+            <a href="#" class="icon"><img src="assets/layout/images/google.webp" style="width: 4rem; height: 4rem"></a>
+            <!-- <a href="#" class="icon"><img src="https://imgs.search.brave.com/b1qzWLZiN4Dm3HPkkcOxdae80mpuTE1g_1Yd1WivZrI/rs:fit:500:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA1LzMyLzIwLzAz/LzM2MF9GXzUzMjIw/MDM1NV9vZEtOOU91/M1dCNmlIV0pURklF/bEZ0SmJUdXpKc3BZ/Ni5qcGc" alt="" style="width: 30px; height: 30px;"></a> -->
+            <a href="#" class="icon"><img src="assets/layout/images/github.png" style="width: 3.3rem; height: 3.3rem"></a>
+            <!-- <a href="#" class="icon"><img src="https://imgs.search.brave.com/AMNOWNlys6t-LdYxrRSfVYYcAHVqt8duRtLNuSfZ334/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9jZG4w/Lmljb25maW5kZXIu/Y29tL2RhdGEvaWNv/bnMvc2hpZnQtbG9n/b3R5cGVzLzMyL0xp/bmtlZGluLTEyOC5w/bmc" alt="" style="width: 30px; height: 30px;"></a> -->
+        </div>
+        <span>you can create it manually</span>
+        <div class="firstName">
+            <input type="text" id="firstName"  formControlName="firstName" required>
+            <label for="firstName">firstName</label>
+        </div>
+        <div class="lastName">
+            <input type="text" id="lastName"  formControlName="lastName" required>
+            <label for="lastName">lastName</label>
+        </div>
+        <div class="email">
+            <input type="email" id="email"  formControlName="email"  required>
+            <label for="email">email</label>
+        </div>
+        <div class="phone">
+            <input type="number" id="phone"  formControlName="phone" required>
+            <label for="phone">phone</label>
+        </div>
+        <div class="userName">
+            <input type="text" id="userName"  formControlName="username" required>
+            <label for="userName">userName</label>
+        </div>
+        <div class="password">
+            <input type="password" id="password"  formControlName="password" required>
+            <label for="password">password</label>
+        </div>
+        <button class="submit" type="submit" (click)="submit()">Sign Up</button>
+    </form>
+
+    <div class="toogle-left">
+        <h1 style="color: #fff;">Great 🎉!</h1>
+        <p>After you have created an account <br>
+            Go back and Sing in</p>
+        <button class="singInBtn" id="login" [routerLink]="['/admin/login']">Sign In</button>
+        <div class="icon">
+            <img src="assets/layout/login/undraw_agreement_re_d4dv.svg">
+        </div>
+    </div>
+</div>
